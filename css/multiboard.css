@@ -6,6 +6,11 @@ html, body {
 .hidden {
   display: none; }
 
+.mkb-shadow {
+  -webkit-box-shadow: 10px 10px 6px -5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 6px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 6px -5px rgba(0, 0, 0, 0.5); }
+
 .triangle {
   content: "";
   border-color: transparent #111111;
@@ -22,44 +27,43 @@ html, body {
   position: aboslute;
   display: inline-block;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   padding: 10px;
   /* Border */
-  border: 1px solid #cccccc;
+  border: 1px solid #dddddd;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -khtml-border-radius: 10px;
   background-color: #ffffff; }
 
-.mkb-container {
+.mkb-container, .mkb-hlist, .mkb-keys {
   position: aboslute;
   display: block;
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: 400px;
-  /* Border 
-  border: 1px solid #cccccc;*/ }
+  max-width: 500px; }
 
-.mkb-hlist ul, .mkb-keys ul {
-  position: relative;
-  display: block;
-  list-style: none;
-  width: 100%; }
-.mkb-hlist li, .mkb-keys li {
-  display: inline-block; }
-.mkb-hlist a, .mkb-keys a {
-  display: block;
-  text-decoration: none;
-  padding: 6px 8px;
-  color: #00BDD8; }
-.mkb-hlist a:hover, .mkb-keys a:hover {
-  color: #00d887; }
+.mkb-hlist, .mkb-keys {
+  display: table; }
+  .mkb-hlist ul, .mkb-keys ul {
+    position: relative;
+    display: table-row;
+    list-style: none;
+    width: 100%; }
+  .mkb-hlist li, .mkb-keys li {
+    display: table-cell; }
+  .mkb-hlist a, .mkb-keys a {
+    display: block;
+    text-decoration: none;
+    padding: 6px 8px;
+    color: #00BDD8; }
+  .mkb-hlist a:hover, .mkb-keys a:hover {
+    color: #00d887; }
 
 .mkb-lang-list {
-  border-bottom: 2px solid #dddddd;
-  margin: -10px -10px 0 -10px;
+  border: 1px solid #dddddd;
   display: block; }
   .mkb-lang-list li {
     border-left: 2px solid #dddddd; }
@@ -68,7 +72,14 @@ html, body {
 
 .mkb-keys {
   margin: 2px 0; }
+  .mkb-keys li {
+    width: 25px !important;
+    height: 30px !important;
+    border: 1px solid #dddddd; }
+  .mkb-keys li:hover {
+    background-color: #dddddd; }
   .mkb-keys a {
+    margin: 0 auto;
     padding: 8px; }
 
 /*# sourceMappingURL=multiboard.css.map */

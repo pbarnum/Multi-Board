@@ -3,6 +3,7 @@ html,body {height:100%;}
 /* Variables */
 $gap: 10px;
 $negGap: -10px;
+$key-color: #dddddd;
 
 /* Mixins */
 @mixin border-radius($radius) {
@@ -15,6 +16,13 @@ $negGap: -10px;
 .hidden {
     display: none;
 }
+
+.mkb-shadow  {
+    -webkit-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.5);
+}
+
 
 .triangle {
     content:"";
@@ -33,11 +41,11 @@ $negGap: -10px;
     position: aboslute;
     display: inline-block;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     padding: $gap;
     
     /* Border */
-    border: 1px solid #cccccc;
+    border: 1px solid $key-color;
     @include border-radius(10px);
     
     background-color: #ffffff;
@@ -49,22 +57,22 @@ $negGap: -10px;
     padding: 0;
     margin: 0;
     width: 100%;
-    max-width: 400px;
-    
-    /* Border 
-    border: 1px solid #cccccc;*/
+    max-width: 500px;
 }
 
 .mkb-hlist {
+    @extend .mkb-container;
+    display: table;
+    
     ul {
         position: relative;
-        display: block;
+        display: table-row;
         list-style: none;
         width: 100%;
     }
     
     li {
-        display: inline-block;
+        display: table-cell;
     }
     
     a {
@@ -80,12 +88,11 @@ $negGap: -10px;
 }
 
 .mkb-lang-list {
-    border-bottom: 2px solid #dddddd;
-    margin: $negGap $negGap 0 $negGap;
+    border: 1px solid $key-color;
     display: block;
     
     li {
-        border-left: 2px solid #dddddd;
+        border-left: 2px solid $key-color;
     }
     
     li:first-child {
@@ -97,13 +104,21 @@ $negGap: -10px;
     @extend .mkb-hlist;
     margin: 2px 0;
     
+    li {
+        width: 25px !important;
+        height: 30px !important;
+        border: 1px solid $key-color;
+    }
+    
+    li:hover {
+        background-color: $key-color
+    }
+    
     a {
+        margin: 0 auto;
         padding: 8px;
     }
 }
-
-
-
 
 
 
