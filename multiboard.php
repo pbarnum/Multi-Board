@@ -9,7 +9,7 @@
     <title>Testing</title>
     
     <link rel="stylesheet" type="text/css" href="/jsPlugins/reset.css"/> <!-- Reset for all browsers -->
-    <link rel="stylesheet" type="text/css" href="/jsPlugins/multiboard/css/multiboard.css"/> <!-- Multi-Language Keyboard -->
+    <link rel="stylesheet" type="text/css" href="/jsPlugins/Multi-Board/css/multiboard.css"/> <!-- Multi-Language Keyboard -->
     <style>
         html, body
         {
@@ -69,9 +69,10 @@
 </head>
 
 <body>
-<div class="mkb-wrap">
+<div class="mkb-wrap mkb-shadow">
     <div class="mkb-container">
         <ul class="mkb-hlist mkb-lang-list">
+            <li>Languages:</li>
             <li><a href="#">English</a></li>
             <li><a href="#">Spanish</a></li>
             <li><a href="#">French</a></li>
@@ -81,44 +82,60 @@
     </div>
     <div class="mkb-container">
         <ul class="mkb-keys">
+            <li><a href="#">`</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">0</a></li>
+            <li><a href="#">-</a></li>
+            <li><a href="#">=</a></li>
+            <li><a href="#">Backspace</a></li>
+        </ul>
+        <ul class="mkb-keys">
             <li><a href="#">Tab</a></li>
-            <li><a href="#">Q</a></li>
-            <li><a href="#">W</a></li>
-            <li><a href="#">E</a></li>
-            <li><a href="#">R</a></li>
-            <li><a href="#">T</a></li>
-            <li><a href="#">Y</a></li>
-            <li><a href="#">U</a></li>
-            <li><a href="#">I</a></li>
-            <li><a href="#">O</a></li>
-            <li><a href="#">P</a></li>
+            <li><a href="#">q</a></li>
+            <li><a href="#">w</a></li>
+            <li><a href="#">e</a></li>
+            <li><a href="#">r</a></li>
+            <li><a href="#">t</a></li>
+            <li><a href="#">y</a></li>
+            <li><a href="#">u</a></li>
+            <li><a href="#">i</a></li>
+            <li><a href="#">o</a></li>
+            <li><a href="#">p</a></li>
             <li><a href="#">[</a></li>
             <li><a href="#">]</a></li>
             <li><a href="#">\</a></li>
         </ul>
         <ul class="mkb-keys">
             <li><a href="#">Caps</a></li>
-            <li><a href="#">A</a></li>
-            <li><a href="#">S</a></li>
-            <li><a href="#">D</a></li>
-            <li><a href="#">F</a></li>
-            <li><a href="#">G</a></li>
-            <li><a href="#">H</a></li>
-            <li><a href="#">J</a></li>
-            <li><a href="#">K</a></li>
-            <li><a href="#">L</a></li>
+            <li><a href="#">a</a></li>
+            <li><a href="#">s</a></li>
+            <li><a href="#">d</a></li>
+            <li><a href="#">f</a></li>
+            <li><a href="#">g</a></li>
+            <li><a href="#">h</a></li>
+            <li><a href="#">j</a></li>
+            <li><a href="#">k</a></li>
+            <li><a href="#">l</a></li>
             <li><a href="#">;</a></li>
             <li><a href="#">'</a></li>
         </ul>
         <ul class="mkb-keys">
             <li><a href="#">Shift</a></li>
-            <li><a href="#">Z</a></li>
-            <li><a href="#">X</a></li>
-            <li><a href="#">C</a></li>
-            <li><a href="#">V</a></li>
-            <li><a href="#">B</a></li>
-            <li><a href="#">N</a></li>
-            <li><a href="#">M</a></li>
+            <li><a href="#">z</a></li>
+            <li><a href="#">x</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">v</a></li>
+            <li><a href="#">b</a></li>
+            <li><a href="#">n</a></li>
+            <li><a href="#">m</a></li>
             <li><a href="#">,</a></li>
             <li><a href="#">.</a></li>
             <li><a href="#">/</a></li>
@@ -149,7 +166,22 @@
 <script>
 (function($)
 {
-    $('textarea[id^=inputBox]').multiboard();
+    $('textarea[id^=inputBox]').multiboard({
+        language: 'english',
+        some: {
+            thing: 'cool',
+            man: 'yeah'
+        },
+        wat: 12345,
+        hey: {
+            lets: {
+                check: {
+                    out: 'testing'
+                }
+            },
+            buddy: 999
+        }
+    });
 }(jQuery));
 </script>
 
